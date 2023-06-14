@@ -10,7 +10,7 @@ A CLI tool that transcribes audio using [`openai-whisper`](https://github.com/op
 ## Install
 
 ```shell
-pip install --user whisper2subs
+pip install git+https://github.com/yangcurve/whisper2subs-rapidapi
 ```
 
 ## Usage
@@ -57,6 +57,6 @@ whisper2subs input.mp4 text/
 
 ## References
 
-* [Whisper](https://github.com/openai/whisper)
-* [DeepL API reference](https://www.deepl.com/docs-api)
-* [`deepl-python`](https://github.com/DeepLcom/deepl-python)
+- [Whisper](https://github.com/openai/whisper)
+- [DeepL API reference](https://www.deepl.com/docs-api)
+- [`deepl-python`](https://github.com/DeepLcom/deepl-python)
