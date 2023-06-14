@@ -21,7 +21,7 @@ whisper2subs --help
 
 ### Translate
 
-In order to perform translations into languages **other than English**, it's required to **provide an API key from DeepL**. Using the `--deepl-apikey` option or with the `DEEPL_APIKEY` environment variable. You can [**create a free account**](https://www.deepl.com/en/pro?cta=header-pro-button/) to get an API key.
+In order to perform translations into languages **other than English**, it's required to **provide an API key from DeepL**. Using the `--deepl-apikey` option or with the `DEEPL_APIKEY` environment variable. You can [**create a free account**](https://rapidapi.com/splintPRO/api/deepl-translator/) to get an API key.
 
 Transcribe and then translate to Spanish the audio of an mp4 file, using the `large-v2` model.
 
