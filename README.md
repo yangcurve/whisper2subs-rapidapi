@@ -58,5 +58,4 @@ whisper2subs input.mp4 text/
 ## References
 
 - [Whisper](https://github.com/openai/whisper)
-- [DeepL API reference](https://www.deepl.com/docs-api)
-- [`deepl-python`](https://github.com/DeepLcom/deepl-python)
+- [DeepL API reference](https://rapidapi.com/splintPRO/api/deepl-translator/)
