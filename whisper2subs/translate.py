@@ -20,11 +20,7 @@ def deepl_translate(
             "X-RapidAPI-Host": "deepl-translator.p.rapidapi.com",
         }
         response = requests.post(url, json=payload, headers=headers)
-        try:
-            result = response.json()["text"]
-        except:
-            result = response.json()
-        print(result)
+        result = response.json()["text"]
 
         transcribed_audio["segments"][i]["text"] = result
 
