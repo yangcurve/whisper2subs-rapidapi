@@ -23,7 +23,7 @@ def deepl_translate(
         try:
             result = response.json()["text"]
         except:
-            result = response.json()
+            result = ""
 
         transcribed_audio["segments"][i]["text"] = result
 
