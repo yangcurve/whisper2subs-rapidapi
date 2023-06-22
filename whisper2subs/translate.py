@@ -1,4 +1,5 @@
 import requests
+from time import sleep
 
 from whisper2subs.transcribe import TranscribeResult
 
@@ -9,6 +10,8 @@ def deepl_translate(
     url = "https://deepl-translator.p.rapidapi.com/translate"
 
     for i, x in enumerate(transcribed_audio["segments"], 0):
+        if i % 30 == 0:
+            sleep(65)
         payload = {
             "text": x["text"],
             "source": "EN",
