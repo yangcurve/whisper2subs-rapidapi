@@ -2,6 +2,7 @@ import requests
 
 from whisper2subs.transcribe import TranscribeResult
 
+
 def deepl_translate(
     transcribed_audio: TranscribeResult, output_language: str, api_key: str
 ) -> TranscribeResult:
@@ -11,18 +12,20 @@ def deepl_translate(
         payload = {
             "text": x["text"],
             "source": "EN",
-            "target": output_language.upper()
+            "target": output_language.upper(),
         }
         headers = {
             "content-type": "application/json",
             "X-RapidAPI-Key": api_key,
-            "X-RapidAPI-Host": "deepl-translator.p.rapidapi.com"
+            "X-RapidAPI-Host": "deepl-translator.p.rapidapi.com",
         }
         response = requests.post(url, json=payload, headers=headers)
-        res = response.json()
-        print(res)
+        try:
+            result = response.json()["text"]
+        except:
+            result = response.json()
+        print(result)
 
-
-        transcribed_audio["segments"][i]["text"] = res["text"] if res["text"] else res
+        transcribed_audio["segments"][i]["text"] = result
 
     return transcribed_audio
